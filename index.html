@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorvolution Remote Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-container">
+        <header>
+            <h1>DOORVOLUTION REMOTE ACCESS</h1>
+        </header>
+
+        <div class="menu-tabs">
+            <button class="menu-tab active" id="main-menu-tab">MAIN MENU</button>
+            <button class="menu-tab" id="schedule-tab">SCHEDULE</button>
+            <button class="menu-tab" id="upload-tab">UPLOAD</button>
+        </div>
+        <div class="content">
+            <div id="main-menu-content" class="tab-content active">
+                <div class="toggle-group">
+                    <div class="toggle-item">
+                        <label class="switch">
+                            <input type="checkbox" id="manual-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <p>MANUAL</p>
+                    </div>
+                    <div class="toggle-item">
+                        <label class="switch">
+                            <input type="checkbox" id="auto-reject-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <p>AUTO<br>REJECT</p>
+                    </div>
+                    <div class="toggle-item">
+                        <label class="switch">
+                            <input type="checkbox" id="auto-accept-toggle">
+                            <span class="slider"></span>
+                        </label>
+                        <p>AUTO<br>ACCEPT</p>
+                    </div>
+                </div>
+
+                <div id="manual-status" class="status-message manual">SOMEONE IS TRYING TO ENTER</div>
+                <div id="auto-reject-status" class="status-message auto-reject">
+                    <img src="auto-reject.gif" alt="Auto Reject">
+                    <span>Auto Rejecting Entry Request</span>
+                </div>
+                <div id="auto-accept-status" class="status-message auto-accept">
+                    <img src="auto-accept.gif" alt="Auto Accept">
+                    <span>Auto Accepting Entry Request</span>
+                </div>
+            </div>
+
+            <div id="schedule-content" class="tab-content hidden">
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <span>AUTO LOCK</span>
+                        <span>12:00 PM</span>
+                        <button class="delete-button">🗑</button>
+                    </div>
+                    <div class="schedule-item">
+                        <span>AUTO LOCK</span>
+                        <span>3:00 PM</span>
+                        <button class="delete-button">🗑</button>
+                    </div>
+                    <div class="schedule-item">
+                        <span>AUTO LOCK</span>
+                        <span>11:00 PM</span>
+                        <button class="delete-button">🗑</button>
+                    </div>
+                </div>
+                <button class="add-button">+</button>
+            </div>
+
+            <div id="upload-content" class="tab-content hidden">
+                <p>UPLOAD IMAGE</p>
+                <input type="file" id="image-upload">
+                <button class="upload-button">UPLOAD</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
